@@ -1,0 +1,10 @@
+.*
+*.spec.*
+
+test
+fixture
+coverage
+yarn-error.log
+examples
+
+*.config.*

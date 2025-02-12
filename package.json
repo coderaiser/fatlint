@@ -1,0 +1,110 @@
+{
+  "name": "fatlint",
+  "version": "1.0.0",
+  "description": "JavaScript linter based on FAT image",
+  "main": "lib/fatlint.js",
+  "type": "module",
+  "exports": {
+    ".": "./lib/fatlint.js",
+    "./with-plugins": "./lib/with-plugins.js"
+  },
+  "imports": {
+    "#test": {
+      "default": "./lib/test/test.js"
+    },
+    "#types": {
+      "default": "./lib/types/types.js"
+    },
+    "#parser": {
+      "default": "./lib/parser/parser.js"
+    },
+    "#printer": {
+      "default": "./lib/printer/printer.js"
+    },
+    "#traverser": {
+      "default": "./lib/traverser/traverser.js"
+    },
+    "#compare": {
+      "default": "./lib/compare/compare.js"
+    },
+    "#compare/values": {
+      "default": "./lib/compare/values.js"
+    },
+    "#runner": {
+      "default": "./lib/runner/runner.js"
+    },
+    "#fatlint": {
+      "default": "./lib/fatlint.js"
+    }
+  },
+  "scripts": {
+    "lint": "madrun lint",
+    "fresh:lint": "madrun fresh:lint",
+    "lint:fresh": "madrun lint:fresh",
+    "fix:lint": "madrun fix:lint",
+    "test": "madrun test",
+    "watch:test": "madrun watch:test",
+    "watch:tape": "madrun watch:tape",
+    "watch:lint": "madrun watch:lint",
+    "watcher": "madrun watcher",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderaiser/fatlint.git"
+  },
+  "keywords": [
+    "fatlint",
+    "scripts",
+    "package",
+    "npm",
+    "npm run",
+    "npm-scripts",
+    "tool",
+    "cli",
+    "command",
+    "task",
+    "parallel",
+    "serial",
+    "run",
+    "commandline"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "bugs": {
+    "url": "https://github.com/coderaiser/fatlint/issues"
+  },
+  "homepage": "https://github.com/coderaiser/fatlint",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@putout/engine-loader": "^15.1.1",
+    "@putout/operator-keyword": "^2.0.0",
+    "all-object-keys": "^3.0.1",
+    "debug": "^4.4.0",
+    "fatfs-wasm": "^3.0.7",
+    "jessy": "^3.1.1",
+    "js-tokens": "^9.0.1",
+    "nessy": "^4.0.0",
+    "try-catch": "^3.0.1"
+  },
+  "devDependencies": {
+    "@putout/eslint-flat": "^2.0.0",
+    "@putout/formatter-json": "^2.0.0",
+    "@putout/test": "^11.1.0",
+    "c8": "^10.1.2",
+    "eslint": "^9.7.0",
+    "eslint-plugin-putout": "^24.0.0",
+    "madrun": "^10.2.2",
+    "mock-require": "^3.0.3",
+    "montag": "^1.0.0",
+    "nodemon": "^3.0.1",
+    "putout": "^38.0.0",
+    "supertape": "^10.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

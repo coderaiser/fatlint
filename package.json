@@ -87,7 +87,7 @@
     "fatfs-wasm": "^3.0.7",
     "jessy": "^3.1.1",
     "js-tokens": "^9.0.1",
-    "nessy": "^4.0.0",
+    "nessy": "^5.1.0",
     "try-catch": "^3.0.1"
   },
   "devDependencies": {
@@ -101,7 +101,7 @@
     "mock-require": "^3.0.3",
     "montag": "^1.0.0",
     "nodemon": "^3.0.1",
-    "putout": "^38.0.0",
+    "putout": "^38.1.7",
     "supertape": "^10.0.0"
   },
   "publishConfig": {

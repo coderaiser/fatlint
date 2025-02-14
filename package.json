@@ -5,34 +5,9 @@
   "main": "lib/fatlint.js",
   "type": "module",
   "exports": {
-    ".": "./lib/fatlint.js",
-    "./with-plugins": "./lib/with-plugins.js"
+    ".": "./lib/fatlint.js"
   },
   "imports": {
-    "#test": {
-      "default": "./lib/test/test.js"
-    },
-    "#types": {
-      "default": "./lib/types/types.js"
-    },
-    "#parser": {
-      "default": "./lib/parser/parser.js"
-    },
-    "#printer": {
-      "default": "./lib/printer/printer.js"
-    },
-    "#traverser": {
-      "default": "./lib/traverser/traverser.js"
-    },
-    "#compare": {
-      "default": "./lib/compare/compare.js"
-    },
-    "#compare/values": {
-      "default": "./lib/compare/values.js"
-    },
-    "#runner": {
-      "default": "./lib/runner/runner.js"
-    },
     "#fatlint": {
       "default": "./lib/fatlint.js"
     }
@@ -88,6 +63,7 @@
     "jessy": "^3.1.1",
     "js-tokens": "^9.0.1",
     "nessy": "^5.1.0",
+    "putout": "^38.1.8",
     "try-catch": "^3.0.1"
   },
   "devDependencies": {
@@ -101,7 +77,6 @@
     "mock-require": "^3.0.3",
     "montag": "^1.0.0",
     "nodemon": "^3.0.1",
-    "putout": "^38.1.7",
     "supertape": "^10.0.0"
   },
   "publishConfig": {

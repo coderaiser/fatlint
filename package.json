@@ -10,6 +10,9 @@
   "imports": {
     "#fatlint": {
       "default": "./lib/fatlint.js"
+    },
+    "#filesystem": {
+      "default": "./lib/filesystem/filesystem.js"
     }
   },
   "scripts": {

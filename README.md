@@ -3,7 +3,7 @@
 FAT-based JavaScript linter. The main idea is using FAT-filesystem for traversing AST,
 so each node written to a file.
 
-![FatLint](https://github.com/coderaiser/fatlint/raw/master/logo/fatlint.png "FatLint")
+![FatLint](https://github.com/coderaiser/fatlint/raw/master/logo/fatlint.jpg "FatLint")
 
 ## Install
 

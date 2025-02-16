@@ -13,6 +13,9 @@
     },
     "#filesystem": {
       "default": "./lib/filesystem/filesystem.js"
+    },
+    "#traverser": {
+      "default": "./lib/traverser/traverser.js"
     }
   },
   "scripts": {
@@ -58,6 +61,7 @@
     "node": ">=18"
   },
   "dependencies": {
+    "@putout/babel": "^3.1.1",
     "all-object-keys": "^3.0.1",
     "debug": "^4.4.0",
     "fatfs-wasm": "^3.0.7",

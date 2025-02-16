@@ -15,3 +15,19 @@ test('fatlint: exports: createFilesystem', async (t) => {
     t.equal(createFilesystem, expected);
     t.end();
 });
+
+test('fatlint: exports: parse', async (t) => {
+    const {parse} = await import('fatlint');
+    const {parse: expected} = await import('#parser');
+    
+    t.equal(parse, expected);
+    t.end();
+});
+
+test('fatlint: exports: print', async (t) => {
+    const {print} = await import('fatlint');
+    const {print: expected} = await import('#printer');
+    
+    t.equal(print, expected);
+    t.end();
+});

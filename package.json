@@ -16,6 +16,12 @@
     },
     "#traverser": {
       "default": "./lib/traverser/traverser.js"
+    },
+    "#parser": {
+      "default": "./lib/parser/parser.js"
+    },
+    "#printer": {
+      "default": "./lib/printer/printer.js"
     }
   },
   "scripts": {

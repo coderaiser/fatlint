@@ -1,0 +1,20 @@
+2025.02.23, v1.0.1
+
+fix:
+- b057936 montag
+
+feature:
+- a89140b fatlint: replaceWith: add
+- 1f6c031 fatlint: eslint-plugin-putout v25.0.2
+- 818707e fatlint: @putout/test v12.0.1
+- 5d4e3d8 fatlint: parse/print
+- a244b84 fatlint: path.remove: add
+- 8c6dddd fatpath: directives
+- d7c161e fatlint: traverse: add suport of node
+- e86269e fatlint: filesystem: readDirectory: add
+- f00fe3f fatlint: traverser: add
+- 022a0fa fatlint: filesystem: findFile: add
+- 4695b29 package: montag
+- bc45e72 fatlint: c8 ignore
+- 05e5867 fatlint: move out SHORT
+- 725dda8 fsast: improve

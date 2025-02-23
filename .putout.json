@@ -1,9 +1,11 @@
 {
     "rules": {
-        "putout": "on",
+        "putout": "off",
         "putout/check-replace-code": "off",
         "putout/declare": "off",
-        "putout/declare-template-variables": "on",
-        "putout/declare-path-variable": "on"
+        "putout/declare-template-variables": "off",
+        "putout/declare-path-variable": "off",
+        "putout/convert-replace-with": "off",
+        "putout/apply-remove": "off"
     }
 }

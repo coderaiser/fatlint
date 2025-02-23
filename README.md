@@ -23,7 +23,11 @@ npm i fatlint
 ## API
 
 ```js
-import {traverse, parse, print} from 'fatlint';
+import {
+    traverse,
+    parse,
+    print,
+} from 'fatlint';
 
 const source = `const a = 'hello'; const b = 'world'`;
 const filesystem = parse(source);
@@ -31,8 +35,8 @@ const filesystem = parse(source);
 traverse(filesystem, {
     VariableDeclarator(path) {
         if (isIdentifier(path.node.id, {name: 'world'}))
-            path.remove();
-    }
+            remove(path);
+    },
 });
 
 print(filesystem);

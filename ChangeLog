@@ -1,3 +1,8 @@
+2025.02.23, v1.0.5
+
+feature:
+- f3095b0 fatlint: when nextSibling not found and cannot remove - be quit, like babel
+
 2025.02.23, v1.0.4
 
 feature:

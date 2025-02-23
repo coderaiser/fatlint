@@ -22,6 +22,12 @@ npm i fatlint
 
 ## API
 
+`traverse` willing to support similar API as `@babel/traverse`.
+
+### remove()
+
+[Removing a node](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#removing-a-node).
+
 ```js
 import {
     traverse,
@@ -35,11 +41,41 @@ const filesystem = parse(source);
 traverse(filesystem, {
     VariableDeclarator(path) {
         if (isIdentifier(path.node.id, {name: 'world'}))
-            remove(path);
+            path.remove(path);
     },
 });
 
 print(filesystem);
+// returns
+`const a = 'hello'\n`;
+```
+
+### replaceWith()
+
+[Replace node](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#replacing-a-parent).
+
+```js
+import {types} from 'putout';
+import {
+    traverse,
+    parse,
+    print,
+} from 'fatlint';
+
+const {NumericLiteral} = types;
+
+const source = `const a = 'hello';`;
+const filesystem = parse(source);
+
+traverse(filesystem, {
+    StringLiteral(path) {
+        path.replaceWith(NumericLiteral(5));
+    },
+});
+
+print(filesystem);
+// returns
+`const a = 5;\n`
 ```
 
 ## License

@@ -1,3 +1,8 @@
+2025.02.23, v1.0.3
+
+feature:
+- ae208d9 fatlint: path.get()
+
 2025.02.23, v1.0.2
 
 feature:

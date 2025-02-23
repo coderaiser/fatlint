@@ -1,6 +1,6 @@
 {
   "name": "fatlint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "JavaScript linter based on FAT image",
   "main": "lib/fatlint.js",
   "type": "module",

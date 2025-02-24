@@ -93,8 +93,6 @@ import {
 const {NumericLiteral} = types;
 
 const disk = await createDisk();
-const filesystem = createFilesystem(disk);
-
 const source = `const a = 'hello'; const b = 'world'`;
 
 const filesystem = parse(source, disk);
@@ -127,8 +125,6 @@ import {
 const {NumericLiteral} = types;
 
 const disk = await createDisk();
-const filesystem = createFilesystem(disk);
-
 const source = `const a = 'hello'; const b = 'world'`;
 
 const filesystem = parse(source, disk);
@@ -144,6 +140,38 @@ traverse(filesystem, {
 print(filesystem);
 // returns
 `const b = 'world';\n`;
+```
+
+### `path.find`
+
+[Find path](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#find-a-specific-parent-path):
+
+```js
+import {types} from 'putout';
+import {
+    traverse,
+    parse,
+    print,
+} from 'fatlint';
+
+const {isVariableDeclaration} = types;
+
+const disk = await createDisk();
+const source = `function x() {const a = 'hello'; const b = 'world';}`;
+
+const filesystem = parse(source, disk);
+
+traverse(filesystem, {
+    StringLiteral(path) {
+        path
+            .find(isVariableDeclaration)
+            .remove();
+    },
+});
+
+print(filesystem);
+// returns
+`function x() {}\n`;
 ```
 
 ## License

@@ -36,7 +36,7 @@ import {
 } from 'fatlint';
 
 const source = `const a = 'hello'; const b = 'world'`;
-const filesystem = parse(source);
+const filesystem = parse(source, disk);
 
 traverse(filesystem, {
     VariableDeclarator(path) {
@@ -65,7 +65,7 @@ import {
 const {NumericLiteral} = types;
 
 const source = `const a = 'hello';`;
-const filesystem = parse(source);
+const filesystem = parse(source, disk);
 
 traverse(filesystem, {
     StringLiteral(path) {
@@ -92,18 +92,58 @@ import {
 
 const {NumericLiteral} = types;
 
+const disk = await createDisk();
+const filesystem = createFilesystem(disk);
+
 const source = `const a = 'hello'; const b = 'world'`;
-const filesystem = parse(source);
+
+const filesystem = parse(source, disk);
 
 traverse(filesystem, {
     VariableDeclaration(path) {
-        path.getNextSibling().remove();
+        path
+            .getNextSibling()
+            .remove();
     },
 });
 
 print(filesystem);
 // returns
 `const a = 'hello';\n`;
+```
+
+### `getPrevSibling()`
+
+Get [prev sibling](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#get-sibling-paths).
+
+```js
+import {types} from 'putout';
+import {
+    traverse,
+    parse,
+    print,
+} from 'fatlint';
+
+const {NumericLiteral} = types;
+
+const disk = await createDisk();
+const filesystem = createFilesystem(disk);
+
+const source = `const a = 'hello'; const b = 'world'`;
+
+const filesystem = parse(source, disk);
+
+traverse(filesystem, {
+    VariableDeclaration(path) {
+        path
+            .getPrevSibling()
+            .remove();
+    },
+});
+
+print(filesystem);
+// returns
+`const b = 'world';\n`;
 ```
 
 ## License

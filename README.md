@@ -78,6 +78,37 @@ print(filesystem);
 `const a = 5;\n`;
 ```
 
+### `replaceWithMultiple()`
+
+[Replace with multiple nodes](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#toc-replacing-a-node-with-multiple-nodes).
+
+```js
+import {types} from 'putout';
+import {
+    traverse,
+    parse,
+    print,
+} from 'fatlint';
+
+const {NumericLiteral} = types;
+
+const source = `const a = ['hello']`;
+const filesystem = parse(source, disk);
+
+traverse(filesystem, {
+    StringLiteral(path) {
+        path.replaceWithMultipleNodes([
+            NumericLiteral(5),
+            NumericLiteral(3),
+        ]);
+    },
+});
+
+print(filesystem);
+// returns
+`const a = [5, 3];\n`;
+```
+
 ### `getNextSibling()`
 
 Get [next sibling](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#get-sibling-paths).
@@ -208,7 +239,6 @@ print(filesystem);
 
 [Access to `parentPath`](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#replacing-a-parent):
 
-
 ### `path.parentPath`
 
 [Stopping Traversal](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#stopping-traversal):
@@ -238,7 +268,7 @@ traverse(filesystem, {
 
 console.log(counter);
 // outputs
-1
+1;
 ```
 
 ## License

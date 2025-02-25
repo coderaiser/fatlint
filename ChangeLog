@@ -1,3 +1,8 @@
+2025.02.25, v1.3.0
+
+feature:
+- 748ecd9 fatlint: traverse: path.stop()
+
 2025.02.25, v1.2.1
 
 feature:

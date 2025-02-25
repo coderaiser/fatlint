@@ -204,6 +204,43 @@ print(filesystem);
 `function x() {}\n`;
 ```
 
+### `path.stop()`
+
+[Access to `parentPath`](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#replacing-a-parent):
+
+
+### `path.parentPath`
+
+[Stopping Traversal](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#stopping-traversal):
+
+```js
+import {types} from 'putout';
+import {
+    traverse,
+    parse,
+    print,
+} from 'fatlint';
+
+const {isVariableDeclaration} = types;
+
+const disk = await createDisk();
+const source = `function x() {const a = 'hello'; const b = 'world';}`;
+
+const filesystem = parse(source, disk);
+let counter = 0;
+
+traverse(filesystem, {
+    StringLiteral(path) {
+        ++counter;
+        path.parentPath.stop();
+    },
+});
+
+console.log(counter);
+// outputs
+1
+```
+
 ## License
 
 MIT

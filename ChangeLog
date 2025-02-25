@@ -1,3 +1,8 @@
+2025.02.25, v1.2.1
+
+feature:
+- e89c296 fatlint: path.parentPath
+
 2025.02.24, v1.2.0
 
 feature:

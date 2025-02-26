@@ -1,3 +1,9 @@
+2025.02.26, v1.4.4
+
+feature:
+- a3b3bbd fatlint: move out find
+- 1816abb path: move out get-{prev,next}-sybling
+
 2025.02.25, v1.4.3
 
 feature:

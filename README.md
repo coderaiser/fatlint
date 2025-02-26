@@ -109,6 +109,36 @@ print(filesystem);
 `const a = [5, 3];\n`;
 ```
 
+### `insertAfter()`
+
+[Insert sibling node](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#inserting-a-sibling-node).
+
+```js
+import {types} from 'putout';
+import {
+    traverse,
+    parse,
+    print,
+} from 'fatlint';
+
+const {NumericLiteral} = types;
+
+const source = `const a = ['hello']`;
+const filesystem = parse(source, disk);
+
+traverse(filesystem, {
+    StringLiteral(path) {
+        path.insertAfter(
+            NumericLiteral(5),
+        );
+    },
+});
+
+print(filesystem);
+// returns
+`const a = ['hello', 5];\n`;
+```
+
 ### `getNextSibling()`
 
 Get [next sibling](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#get-sibling-paths).

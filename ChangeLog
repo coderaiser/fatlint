@@ -1,3 +1,8 @@
+2025.02.26, v1.6.0
+
+feature:
+- 96ecb9b fatlint: traverser: insertBefore
+
 2025.02.26, v1.5.0
 
 feature:

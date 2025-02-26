@@ -2,7 +2,7 @@ import {test} from 'supertape';
 
 test('fatlint: exports: traverse', async (t) => {
     const {traverse} = await import('fatlint');
-    const {traverse: expected} = await import('../lib/traverser/traverser.js');
+    const {traverse: expected} = await import('#traverser');
     
     t.equal(traverse, expected);
     t.end();

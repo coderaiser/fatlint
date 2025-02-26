@@ -71,6 +71,8 @@
   },
   "dependencies": {
     "@putout/babel": "^3.1.1",
+    "@putout/engine-loader": "^15.3.3",
+    "@putout/engine-runner": "^23.1.0",
     "all-object-keys": "^3.0.1",
     "debug": "^4.4.0",
     "fatfs-wasm": "^3.0.7",

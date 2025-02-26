@@ -128,9 +128,7 @@ const filesystem = parse(source, disk);
 
 traverse(filesystem, {
     StringLiteral(path) {
-        path.insertAfter(
-            NumericLiteral(5),
-        );
+        path.insertAfter(NumericLiteral(5));
     },
 });
 

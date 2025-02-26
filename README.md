@@ -175,6 +175,7 @@ import {
     traverse,
     parse,
     print,
+    createDisk,
 } from 'fatlint';
 
 const {NumericLiteral} = types;
@@ -207,6 +208,7 @@ import {
     traverse,
     parse,
     print,
+    createDisk,
 } from 'fatlint';
 
 const {NumericLiteral} = types;
@@ -239,6 +241,7 @@ import {
     traverse,
     parse,
     print,
+    createDisk,
 } from 'fatlint';
 
 const {isVariableDeclaration} = types;
@@ -271,6 +274,7 @@ import {
     traverse,
     parse,
     print,
+    createDisk,
 } from 'fatlint';
 
 const {isVariableDeclaration} = types;
@@ -305,6 +309,7 @@ import {
     traverse,
     parse,
     print,
+    createDisk,
 } from 'fatlint';
 
 const {isVariableDeclaration} = types;

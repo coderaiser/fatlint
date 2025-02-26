@@ -31,3 +31,11 @@ test('fatlint: exports: print', async (t) => {
     t.equal(print, expected);
     t.end();
 });
+
+test('fatlint: exports: createDisk', async (t) => {
+    const {createDisk} = await import('fatlint');
+    const {createDisk: expected} = await import('#fatdisk');
+    
+    t.equal(createDisk, expected);
+    t.end();
+});

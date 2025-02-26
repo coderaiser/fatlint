@@ -22,6 +22,9 @@
     },
     "#printer": {
       "default": "./lib/printer/printer.js"
+    },
+    "#fatdisk": {
+      "default": "./lib/fatdisk.js"
     }
   },
   "scripts": {

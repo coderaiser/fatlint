@@ -1,3 +1,8 @@
+2025.02.27, v1.7.2
+
+fix:
+- 347ac0c fatlint: print
+
 2025.02.27, v1.7.1
 
 feature:

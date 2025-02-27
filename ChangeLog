@@ -1,3 +1,8 @@
+2025.02.27, v1.8.0
+
+feature:
+- 88db071 fatlint: traverser: is-methods
+
 2025.02.27, v1.7.2
 
 fix:

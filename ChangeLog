@@ -1,3 +1,8 @@
+2025.03.01, v1.10.0
+
+feature:
+- 8cc2567 fatlint: scope: uid: add
+
 2025.02.28, v1.9.1
 
 feature:

@@ -25,6 +25,9 @@
     },
     "#fatdisk": {
       "default": "./lib/fatdisk.js"
+    },
+    "#fsast": {
+      "default": "./lib/fsast.js"
     }
   },
   "scripts": {

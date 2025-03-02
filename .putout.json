@@ -2,10 +2,12 @@
     "rules": {
         "putout": "off",
         "putout/check-replace-code": "off",
-        "putout/declare": "off",
+        "putout/declare": "on",
         "putout/declare-template-variables": "off",
         "putout/declare-path-variable": "off",
         "putout/convert-replace-with": "off",
-        "putout/apply-remove": "off"
+        "putout/apply-remove": "off",
+        "putout/apply-insert-before": "off",
+        "putout/apply-insert-after": "off"
     }
 }

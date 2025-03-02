@@ -34,7 +34,9 @@ import {
     parse,
     print,
 } from 'fatlint';
+import {types} from 'putout';
 
+const {isIdentifier} = types;
 const source = `const a = 'hello'; const b = 'world'`;
 const filesystem = parse(source, disk);
 

@@ -1,3 +1,8 @@
+2025.03.02, v1.11.0
+
+feature:
+- 41a6159 fatlint: path.scope.bindings: add
+
 2025.03.01, v1.10.0
 
 feature:

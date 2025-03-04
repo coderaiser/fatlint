@@ -1,3 +1,8 @@
+2025.03.04, v1.13.1
+
+feature:
+- 4c01e03 fatlint: path.remove: parent is ExpressionStatement
+
 2025.03.03, v1.13.0
 
 feature:

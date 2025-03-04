@@ -1,3 +1,8 @@
+2025.03.04, v1.14.0
+
+feature:
+- 6cbacd8 fatlint: path: to string
+
 2025.03.04, v1.13.1
 
 feature:

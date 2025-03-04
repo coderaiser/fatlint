@@ -1,3 +1,9 @@
+2025.03.04, v1.15.0
+
+feature:
+- d4156f3 fatlint: bindings: read/write: move out
+- 378c27e fatlint: cache bindings
+
 2025.03.04, v1.14.1
 
 feature:

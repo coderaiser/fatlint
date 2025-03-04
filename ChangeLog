@@ -1,3 +1,8 @@
+2025.03.04, v1.18.0
+
+feature:
+- f2e77c9 fatlint: traverser: hasBinding
+
 2025.03.04, v1.17.0
 
 feature:

@@ -1,3 +1,8 @@
+2025.03.05, v2.0.7
+
+fix:
+- fe22db1 fatlint: loadPluginsAsync
+
 2025.03.05, v2.0.6
 
 feature:

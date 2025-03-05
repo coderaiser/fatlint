@@ -1,3 +1,8 @@
+2025.03.05, v2.0.6
+
+feature:
+- 3aeb728 fatlint: traverse: path: get: params
+
 2025.03.05, v2.0.5
 
 feature:

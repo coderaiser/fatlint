@@ -1,3 +1,8 @@
+2025.03.05, v1.18.2
+
+feature:
+- 8ded0c9 fatlint: traverse: ObjectExpression
+
 2025.03.05, v1.18.1
 
 feature:

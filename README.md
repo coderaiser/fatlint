@@ -64,14 +64,14 @@ import {
     print,
 } from 'fatlint';
 
-const {NumericLiteral} = types;
+const {numericLiteral} = types;
 
 const source = `const a = 'hello';`;
 const filesystem = parse(source, disk);
 
 traverse(filesystem, {
     StringLiteral(path) {
-        path.replaceWith(NumericLiteral(5));
+        path.replaceWith(numericLiteral(5));
     },
 });
 
@@ -92,7 +92,7 @@ import {
     print,
 } from 'fatlint';
 
-const {NumericLiteral} = types;
+const {numericLiteral} = types;
 
 const source = `const a = ['hello']`;
 const filesystem = parse(source, disk);
@@ -100,8 +100,8 @@ const filesystem = parse(source, disk);
 traverse(filesystem, {
     StringLiteral(path) {
         path.replaceWithMultipleNodes([
-            NumericLiteral(5),
-            NumericLiteral(3),
+            numericLiteral(5),
+            numericLiteral(3),
         ]);
     },
 });
@@ -123,14 +123,14 @@ import {
     print,
 } from 'fatlint';
 
-const {NumericLiteral} = types;
+const {numericLiteral} = types;
 
 const source = `const a = ['hello']`;
 const filesystem = parse(source, disk);
 
 traverse(filesystem, {
     StringLiteral(path) {
-        path.insertBefore(NumericLiteral(5));
+        path.insertBefore(numericLiteral(5));
     },
 });
 
@@ -151,14 +151,14 @@ import {
     print,
 } from 'fatlint';
 
-const {NumericLiteral} = types;
+const {numericLiteral} = types;
 
 const source = `const a = ['hello']`;
 const filesystem = parse(source, disk);
 
 traverse(filesystem, {
     StringLiteral(path) {
-        path.insertAfter(NumericLiteral(5));
+        path.insertAfter(numericLiteral(5));
     },
 });
 
@@ -179,8 +179,6 @@ import {
     print,
     createDisk,
 } from 'fatlint';
-
-const {NumericLiteral} = types;
 
 const disk = await createDisk();
 const source = `const a = 'hello'; const b = 'world'`;
@@ -212,8 +210,6 @@ import {
     print,
     createDisk,
 } from 'fatlint';
-
-const {NumericLiteral} = types;
 
 const disk = await createDisk();
 const source = `const a = 'hello'; const b = 'world'`;
